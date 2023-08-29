@@ -37,10 +37,18 @@ function showResult(myEuroResult, myDollarResult, myDanishAmount) {
     resultElement.innerHTML = myDanishAmount + ' danske kroner bliver til: ' + myEuroResult + ' euro og ' + myDollarResult + ' dollars';
 
 }
+//opgaveløsning:
+function calculateExchange(amountDKK, exchangeRate) {
+    let exchangedAmount = amountDKK / exchangeRate;
+    return exchangedAmount;
 
-/* skriv din kode herunder.
+}
 
-
+function makeExchange(myEuroRate, myDollarRate, myDanishAmount) {
+    let MyEuros = calculateExchange(myDanishAmount, myEuroRate);
+    let myDollars = calculateExchange(myDanishAmount, myDollarRate);
+    showResult(MyEuros, myDollars, myDanishAmount);
+}
 
 
 
